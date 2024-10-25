@@ -1,0 +1,17 @@
+@use "../../styles/mixins" as m;
+
+.navStyling {
+    @include m.flexBox(row, center, center, 12rem);
+    background: #1c1c1c;
+    margin: 0;
+    padding: 1rem 0rem;
+
+    li {
+        list-style-type: none;
+
+        a {
+            color: #fff;
+            text-decoration: none;
+        }
+    }
+}
