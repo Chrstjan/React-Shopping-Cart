@@ -5,9 +5,9 @@ export const ProductsPage = () => {
 
   const [products, setProducts] = useState([]);
 
-  const {cartData} = useContext(CartContext);
+  const {cartData, addToCart} = useContext(CartContext);
 
-  console.log(`Cart data: ${cartData}`);
+  console.log("Cart data", cartData);
   
   useEffect(() => {
     const getProducts = async () => {
@@ -21,13 +21,15 @@ export const ProductsPage = () => {
 
   console.log(products);
   return (
-    <div>{products?.products?.map((item) => {
+    <div>
+      <h2>Products:</h2>
+      {products?.products?.map((item) => {
         return (
             <figure key={item.id}>
                 <h4>{item.title}</h4>
-                <p>{item.price} $</p>
+                <p>{item.price}$</p>
                 <p>{item.category}</p>
-                <button>Add to cart</button>
+                <button onClick={() => addToCart(item)}>Add to cart</button>
             </figure>
         )
     })}</div>

@@ -1,0 +1,21 @@
+.cartStyling {
+    border: 1px solid black;
+    text-align: center;
+    padding-bottom: 1rem;
+
+    figure {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    span {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        gap: 0.4rem;
+    }
+}
